@@ -1,1 +1,1 @@
-### GenWalls - AI Generated Wallpapers
+## GenWalls - AI Generated Wallpapers
