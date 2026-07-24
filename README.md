@@ -1,1 +1,3 @@
-## GenWalls - AI Generated Wallpapers
+```bash
+GenWalls - AI Generated Wallpapers
+```
