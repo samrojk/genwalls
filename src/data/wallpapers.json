@@ -1,0 +1,10 @@
+{
+    "wallpapers": [
+        {
+            "id": 1,
+            "title": "Sunset Over Mountains",
+            "url": "https://example.com/wallpapers/sunset.jpg",
+            "tags": ["sunset", "mountains", "nature"]
+        }
+    ]  
+}
