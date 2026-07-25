@@ -1,10 +1,12 @@
-{
-    "wallpapers": [
-        {
-            "id": 1,
-            "title": "Sunset Over Mountains",
-            "url": "https://example.com/wallpapers/sunset.jpg",
-            "tags": ["sunset", "mountains", "nature"]
-        }
-    ]  
-}
+[
+  {
+    "id": 1,
+    "slug": "attack-on-titan",
+    "title": "Attack on Titan",
+    "category": "Anime",
+    "tags": ["attack on titan", "aot", "anime", "dark"],
+    "orientation": "desktop",
+    "image": "/aot-wp.jpg",
+    "featured": true
+  }
+]
