@@ -1,5 +1,7 @@
 import Navbar from "../components/navbar";
 import Categorychips from "../components/categorychips";
+import wallpapers from "../data/wallpapers.json";
+import WallpaperGrid from "../components/wallpapergrid";
 
 const home = () => {
   return (
@@ -16,6 +18,17 @@ const home = () => {
               screen.
             </p>
             <Categorychips />
+          </section>
+          <section className="pb-20">
+            <div className="mb-6 flex items-center justify-between">
+              <h2 className="text-xl font-medium">Explore</h2>
+
+              <span className="text-sm text-accent-white/50">
+                {wallpapers.length} wallpapers
+              </span>
+            </div>
+
+            <WallpaperGrid wallpapers={wallpapers} />
           </section>
         </main>
       </div>

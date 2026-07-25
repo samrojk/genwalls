@@ -1,9 +1,13 @@
-import React from 'react'
+import WallpaperCard from "./wallpapercard";
 
-const wallpapergrid = () => {
+const WallpaperGrid = ({ wallpapers }) => {
   return (
-    <div>wallpapergrid</div>
-  )
-}
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {wallpapers.map((wallpaper) => (
+        <WallpaperCard key={wallpaper.id} wallpaper={wallpaper} />
+      ))}
+    </div>
+  );
+};
 
-export default wallpapergrid
+export default WallpaperGrid;
