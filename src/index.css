@@ -6,3 +6,8 @@ body {
   color: #efefef;  
   font-family: "Geist", sans-serif;
 }
+
+@theme {
+  --color-accent-dark: #131314;
+  --color-accent-white: #efefef;
+}
