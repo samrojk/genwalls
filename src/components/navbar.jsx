@@ -4,7 +4,7 @@ import Logo from "../assets/genwalls.webp";
 
 const navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 flex w-full items-center justify-between bg-accent-dark/80 py-2 backdrop-blur-lg">
+    <nav className="px-16 sticky top-0 z-50 flex w-full items-center justify-between bg-accent-dark/80 py-3 backdrop-blur-lg">
       <Link
         to="/"
         className="flex items-center gap-2 text-accent-white font-medium text-lg"
