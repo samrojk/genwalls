@@ -14,12 +14,28 @@ const navbar = () => {
       </Link>
 
       <Searchbar />
-      <div className="flex gap-2">
+      {/* Pages */}
+      <div className="flex gap-2 items-center">
         <Link
           to="/category/anime"
           className="text-accent-white/88 hover:text-accent-white px-4 py-1 rounded-xl hover:bg-white/5 transition-all duration-200"
         >
           Category
+        </Link>
+        <Link
+          to="/trending"
+          className="text-accent-white/88 hover:text-accent-white px-4 py-1 rounded-xl hover:bg-white/5 transition-all duration-200"
+        >
+          Trending
+        </Link>
+        <Link
+          hidden
+          to="https://buymeacoffee.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent-white/88 hover:text-accent-white px-4 py-2 rounded-xl border border-accent-white/4 hover:border-accent-white/8 bg-white/2 hover:bg-accent-white/5 transition-all duration-200"
+        >
+          Buy Me a Coffee ☕
         </Link>
       </div>
     </nav>
