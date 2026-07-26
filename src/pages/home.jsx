@@ -4,6 +4,18 @@ import wallpapers from "../data/wallpapers.json";
 import WallpaperGrid from "../components/wallpapergrid";
 
 const home = () => {
+  const trendingWallpapers = wallpapers
+    .filter((wallpaper) => wallpaper.trending)
+    .slice(0, 4);
+
+  const featuredWallpapers = wallpapers
+    .filter((wallpaper) => wallpaper.featured)
+    .slice(0, 4);
+
+  const latestWallpapers = [...wallpapers]
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(0, 8);
+
   return (
     <>
       <div className="px-16">
@@ -19,16 +31,44 @@ const home = () => {
             </p>
             <Categorychips />
           </section>
-          <section className="pb-20">
-            <div className="mb-6 flex items-center justify-between">
-              <h2 className="text-xl font-medium">Explore</h2>
 
-              <span className="text-sm text-accent-white/50">
-                {wallpapers.length} wallpapers
-              </span>
-            </div>
+          {/* Wallpapers Section */}
+          <section>
+            <section id="trending" className="pb-20">
+              <div className="mb-6 flex items-center justify-between">
+                <h2 className="text-xl font-medium">Trending 🔥</h2>
 
-            <WallpaperGrid wallpapers={wallpapers} />
+                <span className="text-sm text-accent-white/60">
+                  {trendingWallpapers.length} wallpapers
+                </span>
+              </div>
+
+              <WallpaperGrid wallpapers={trendingWallpapers} />
+            </section>
+
+            <section id="featured" className="pb-20">
+              <div className="mb-6 flex items-center justify-between">
+                <h2 className="text-xl font-medium">Featured</h2>
+
+                <span className="text-sm text-accent-white/60">
+                  {featuredWallpapers.length} wallpapers
+                </span>
+              </div>
+
+              <WallpaperGrid wallpapers={featuredWallpapers} />
+            </section>
+
+            <section id="latest" className="pb-20">
+              <div className="mb-6 flex items-center justify-between">
+                <h2 className="text-xl font-medium">Latest</h2>
+
+                <span className="text-sm text-accent-white/60">
+                  {latestWallpapers.length} wallpapers
+                </span>
+              </div>
+
+              <WallpaperGrid wallpapers={latestWallpapers} />
+            </section>
           </section>
         </main>
       </div>
