@@ -18,13 +18,13 @@ const navbar = () => {
       <div className="flex gap-2 items-center">
         <Link
           to="/category/anime"
-          className="text-accent-white/88 hover:text-accent-white px-4 py-1 rounded-xl hover:bg-white/5 transition-all duration-200"
+          className="text-accent-white/88 hover:text-accent-white px-4 py-2 rounded-xl hover:bg-white/5 transition-all duration-200"
         >
           Category
         </Link>
         <Link
           to="/trending"
-          className="text-accent-white/88 hover:text-accent-white px-4 py-1 rounded-xl hover:bg-white/5 transition-all duration-200"
+          className="text-accent-white/88 hover:text-accent-white px-4 py-2 rounded-xl hover:bg-white/5 transition-all duration-200"
         >
           Trending
         </Link>
