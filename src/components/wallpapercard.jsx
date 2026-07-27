@@ -10,7 +10,7 @@ const WallpaperCard = ({ wallpaper }) => {
         src={wallpaper.image}
         alt={wallpaper.title}
         loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+        className="aspect-video h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
       />
 
       <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 to-transparent p-4 pt-12 opacity-0 transition-opacity duration-250 group-hover:opacity-100">
