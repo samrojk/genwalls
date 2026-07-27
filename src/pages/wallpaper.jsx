@@ -44,12 +44,12 @@ const wallpaper = () => {
       (item) =>
         item.category === wallpaper.category && item.id !== wallpaper.id,
     )
-    .slice(0, 4);
+    .slice(0, 3);
 
   return (
     <>
       <Navbar />
-      <main className="mx-auto max-w-auto px-16 pb-20 py-8">
+      <main className="mx-auto px-16 pb-20 py-8">
         {/* Back btn */}
         <Link
           to="/"
@@ -144,7 +144,7 @@ const wallpaper = () => {
         {/* Related */}
         {relatedWallpapers.length > 0 && (
           <section>
-            <div>
+            <div className="mt-16 mb-6 flex items-center justify-between">
               <h2 className="text-xl font-medium">More like this</h2>
 
               <Link

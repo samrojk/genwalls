@@ -6,17 +6,40 @@ import wallpapers from "../data/wallpapers.json";
 import WallpaperGrid from "../components/wallpapergrid";
 
 const home = () => {
-  const trendingWallpapers = wallpapers
-    .filter((wallpaper) => wallpaper.trending)
-    .slice(0, 4);
+  // ALL TRENDING
+  const allTrendingWallpapers = wallpapers.filter(
+    (wallpaper) => wallpaper.trending,
+  );
 
-  const featuredWallpapers = wallpapers
-    .filter((wallpaper) => wallpaper.featured)
-    .slice(0, 4);
+  // Show only 3 trending on homepage
+  const trendingWallpapers = allTrendingWallpapers.slice(0, 3);
 
-  const latestWallpapers = [...wallpapers]
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-    .slice(0, 8);
+  // ALL FEATURED
+  const allFeaturedWallpapers = wallpapers.filter(
+    (wallpaper) => wallpaper.featured,
+  );
+
+  // Remove wallpapers already displayed in Trending
+  const featuredWallpapers = allFeaturedWallpapers
+    .filter(
+      (wallpaper) =>
+        !trendingWallpapers.some((trending) => trending.id === wallpaper.id),
+    )
+    .slice(0, 3);
+
+  // ALL WALLPAPERS SORTED NEWEST FIRST
+  const allLatestWallpapers = [...wallpapers].sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+  );
+
+  // Remove anything already displayed in Trending or Featured
+  const latestWallpapers = allLatestWallpapers
+    .filter(
+      (wallpaper) =>
+        !trendingWallpapers.some((trending) => trending.id === wallpaper.id) &&
+        !featuredWallpapers.some((featured) => featured.id === wallpaper.id),
+    )
+    .slice(0, 12);
 
   return (
     <>
@@ -43,7 +66,7 @@ const home = () => {
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
-                    {trendingWallpapers.length} wallpapers
+                    {allTrendingWallpapers.length} wallpapers
                   </span>
                   <Link
                     to="/trending"
@@ -65,7 +88,7 @@ const home = () => {
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
-                    {featuredWallpapers.length} wallpapers
+                    {allFeaturedWallpapers.length} wallpapers
                   </span>
                   <Link
                     to="/featured"
@@ -87,7 +110,7 @@ const home = () => {
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
-                    {latestWallpapers.length} wallpapers
+                    {allLatestWallpapers.length} wallpapers
                   </span>
                   <Link
                     to="/latest"
