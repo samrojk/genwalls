@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 import Navbar from "../components/navbar";
 import WallpaperGrid from "../components/wallpapergrid";
@@ -6,6 +6,7 @@ import wallpapers from "../data/wallpapers.json";
 
 const search = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const query = searchParams.get("q") || "";
 
@@ -31,13 +32,13 @@ const search = () => {
       <main className="mx-auto max-w-auto px-16 py-10">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link
-              to="/"
+            <button
+              onClick={() => navigate(-1)}
               className="inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
             >
               <FaArrowLeft size={14} />
               Back
-            </Link>
+            </button>
             <h1 className="text-xl font-semibold">
               Search results for "{query}"
             </h1>

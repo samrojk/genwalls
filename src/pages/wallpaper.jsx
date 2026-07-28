@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaDownload, FaAngleRight } from "react-icons/fa6";
 import Navbar from "../components/navbar";
 import WallpaperGrid from "../components/wallpapergrid";
@@ -7,6 +7,7 @@ import wallpapers from "../data/wallpapers.json";
 
 const wallpaper = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
 
   const [dimensions, setDimensions] = useState({
     width: 0,
@@ -26,13 +27,13 @@ const wallpaper = () => {
             <p className="mt-2 text-accent-white/50">
               We couldn't find the wallpaper you're looking for...
             </p>
-            <Link
-              to="/"
+            <button
+              onClick={() => navigate(-1)}
               className="mt-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
             >
               <FaArrowLeft size={14} />
-              Back to the Galaxy
-            </Link>
+              Go Back
+            </button>
           </div>
         </main>
       </>
@@ -51,13 +52,13 @@ const wallpaper = () => {
       <Navbar />
       <main className="mx-auto px-16 pb-20 py-8">
         {/* Back btn */}
-        <Link
-          to="/"
+        <button
+          onClick={() => navigate(-1)}
           className="mb-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
         >
           <FaArrowLeft size={14} />
           Back
-        </Link>
+        </button>
 
         <section className="grid overflow-hidden rounded-2xl border border-accent-white/6 bg-accent-white/2 lg:grid-cols-[minmax(0,1fr)_340px]">
           {/* image */}
