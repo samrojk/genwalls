@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa6";
-import Navbar from "../components/navbar";
 import Categorychips from "../components/categorychips";
 import wallpapers from "../data/wallpapers.json";
 import WallpaperGrid from "../components/wallpapergrid";
@@ -43,7 +42,6 @@ const home = () => {
 
   return (
     <>
-      <Navbar />
       <div className="px-16">
         <main className="mx-auto max-w-auto">
           <section className="py-16 text-center">

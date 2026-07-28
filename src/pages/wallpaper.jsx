@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaDownload, FaAngleRight } from "react-icons/fa6";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import WallpaperGrid from "../components/wallpapergrid";
 import wallpapers from "../data/wallpapers.json";
 
@@ -20,8 +18,7 @@ const wallpaper = () => {
   if (!wallpaper) {
     return (
       <>
-        <Navbar />
-        <main className="flex min-h-[80vh] items-center justify-center px-6">
+        <main className="flex min-h-[71vh] items-center justify-center px-6">
           <div className="text-center">
             <span className="text-sm text-accent-white/50">404 ERROR</span>
             <h1 className="mt-2 text-4xl font-semibold">Lost in the walls!</h1>
@@ -37,7 +34,6 @@ const wallpaper = () => {
             </button>
           </div>
         </main>
-        <Footer />
       </>
     );
   }
@@ -51,8 +47,7 @@ const wallpaper = () => {
 
   return (
     <>
-      <Navbar />
-      <main className="mx-auto px-16 pb-20 py-8">
+      <main className="mx-auto px-16 pb-10 py-8">
         {/* Back btn */}
         <button
           onClick={() => navigate(-1)}
@@ -163,7 +158,6 @@ const wallpaper = () => {
           </section>
         )}
       </main>
-      <Footer />
     </>
   );
 };
