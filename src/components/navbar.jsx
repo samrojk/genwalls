@@ -29,11 +29,11 @@ const navbar = () => {
           Trending
         </Link>
         <Link
-          hidden
+          // hidden
           to="https://buymeacoffee.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent-white/88 hover:text-accent-white px-4 py-2 rounded-xl border border-accent-white/4 hover:border-accent-white/8 bg-white/2 hover:bg-accent-white/5 transition-all duration-200"
+          className="text-accent-dark font-medium px-4 py-2 rounded-xl bg-accent-white hover:opacity-90 transition-all duration-200"
         >
           Buy Me a Coffee ☕
         </Link>
