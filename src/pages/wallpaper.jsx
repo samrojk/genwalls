@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaDownload, FaAngleRight } from "react-icons/fa6";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import WallpaperGrid from "../components/wallpapergrid";
 import wallpapers from "../data/wallpapers.json";
 
@@ -36,6 +37,7 @@ const wallpaper = () => {
             </button>
           </div>
         </main>
+        <Footer />
       </>
     );
   }
@@ -161,6 +163,7 @@ const wallpaper = () => {
           </section>
         )}
       </main>
+      <Footer />
     </>
   );
 };

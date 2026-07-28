@@ -46,7 +46,7 @@ const home = () => {
       <Navbar />
       <div className="px-16">
         <main className="mx-auto max-w-auto">
-          <section className="py-18 text-center">
+          <section className="py-16 text-center">
             <h1 className="text-accent-white font-semibold text-5xl tracking-tight">
               Find your next wallpaper.
             </h1>
@@ -62,7 +62,7 @@ const home = () => {
             {/* Trending Section */}
             <section id="trending" className="pb-20">
               <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-xl font-medium">Trending 🔥</h2>
+                <h2 className="text-2xl font-medium">Trending 🔥</h2>
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
@@ -84,7 +84,7 @@ const home = () => {
             {/* Featured Section */}
             <section id="featured" className="pb-20">
               <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-xl font-medium">Featured</h2>
+                <h2 className="text-2xl font-medium">Featured</h2>
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
@@ -106,7 +106,7 @@ const home = () => {
             {/* Latest Section */}
             <section id="latest" className="pb-20">
               <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-xl font-medium">Latest</h2>
+                <h2 className="text-2xl font-medium">Latest</h2>
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
@@ -124,13 +124,13 @@ const home = () => {
 
               <WallpaperGrid wallpapers={latestWallpapers} />
               <div className="mt-6 flex justify-center">
-              <Link
-                to="/latest"
-                className="flex items-center gap-1 rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
-              >
-                Show more
-                <FaAngleDown />
-              </Link>
+                <Link
+                  to="/latest"
+                  className="flex items-center gap-1 text-sm rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+                >
+                  Show more
+                  <FaAngleDown />
+                </Link>
               </div>
             </section>
           </section>
