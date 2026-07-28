@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight, FaAngleDown } from "react-icons/fa6";
 import Navbar from "../components/navbar";
 import Categorychips from "../components/categorychips";
 import wallpapers from "../data/wallpapers.json";
@@ -45,7 +45,7 @@ const home = () => {
     <>
       <Navbar />
       <div className="px-16">
-        <main className="mx-auto max-w-350">
+        <main className="mx-auto max-w-auto">
           <section className="py-18 text-center">
             <h1 className="text-accent-white font-semibold text-5xl tracking-tight">
               Find your next wallpaper.
@@ -123,6 +123,15 @@ const home = () => {
               </div>
 
               <WallpaperGrid wallpapers={latestWallpapers} />
+              <div className="mt-6 flex justify-center">
+              <Link
+                to="/latest"
+                className="flex items-center gap-1 rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+              >
+                Show more
+                <FaAngleDown />
+              </Link>
+              </div>
             </section>
           </section>
         </main>

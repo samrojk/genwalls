@@ -11,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/category/:category" element={<Category />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/category/:slug" element={<Category />} />
         <Route path="/wallpaper/:slug" element={<Wallpaper />} />
       </Routes>
     </BrowserRouter>
