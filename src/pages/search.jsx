@@ -1,6 +1,5 @@
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
-import Navbar from "../components/navbar";
 import WallpaperGrid from "../components/wallpapergrid";
 import wallpapers from "../data/wallpapers.json";
 
@@ -28,7 +27,6 @@ const search = () => {
 
   return (
     <>
-      <Navbar />
       <main className="mx-auto max-w-auto px-16 py-10">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -52,7 +50,7 @@ const search = () => {
         {results.length > 0 ? (
           <WallpaperGrid wallpapers={results} />
         ) : (
-          <div className="flex min-h-80 items-center justify-center text-center">
+          <div className="flex min-h-[50vh] items-center justify-center text-center">
             <div>
               <h2 className="text-2xl font-medium">No wallpapers found</h2>
               <p className="mt-2 text-sm text-accent-white/50">

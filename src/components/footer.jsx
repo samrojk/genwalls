@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-accent-white/6 bg-accent-white/1">
+    <footer className="border-t border-accent-white/6 bg-accent-white/1 mt-10">
       <div className="mx-auto flex items-center justify-between px-16 pt-4 pb-8">
         <p className="text-accent-white/40 text-sm">© 2026 GenWalls</p>
 

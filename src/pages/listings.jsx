@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6";
-import Navbar from "../components/navbar";
 import WallpaperGrid from "../components/wallpapergrid";
 import wallpapers from "../data/wallpapers.json";
 
@@ -39,7 +38,6 @@ const Listing = () => {
 
   return (
     <>
-      <Navbar />
       <main className="mx-auto max-w-auto px-16 py-10">
         <div className="mb-6 flex items-center justify-between">
           <span>

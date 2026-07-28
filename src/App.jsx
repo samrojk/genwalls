@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Layout from "./components/layout";
 import Home from "./pages/home";
 import Search from "./pages/search";
 import Category from "./pages/category";
@@ -10,16 +10,25 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        {/* Listings */}
-        <Route path="/trending" element={<Listings />} />
-        <Route path="/featured" element={<Listings />} />
-        <Route path="/latest" element={<Listings />} />
-        {/* Category */}
-        <Route path="/category" element={<Category />} />
-        <Route path="/category/:slug" element={<Category />} />
-        <Route path="/wallpaper/:slug" element={<Wallpaper />} />
+        <Route element={<Layout />}>
+          {/* Home */}
+          <Route path="/" element={<Home />} />
+
+          {/* Search */}
+          <Route path="/search" element={<Search />} />
+
+          {/* Listings */}
+          <Route path="/trending" element={<Listings />} />
+          <Route path="/featured" element={<Listings />} />
+          <Route path="/latest" element={<Listings />} />
+
+          {/* Category */}
+          <Route path="/category" element={<Category />} />
+          <Route path="/category/:slug" element={<Category />} />
+
+          {/* Wallpaper */}
+          <Route path="/wallpaper/:slug" element={<Wallpaper />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,5 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaAngleRight } from "react-icons/fa6";
-import Navbar from "../components/navbar";
 import WallpaperGrid from "../components/wallpapergrid";
 import wallpapers from "../data/wallpapers.json";
 
@@ -14,7 +13,6 @@ const Category = () => {
 
     return (
       <>
-        <Navbar />
         <main className="mx-auto max-w-auto px-16 py-10">
           <div className="flex items-center justify-between">
             <span>
@@ -90,8 +88,7 @@ const Category = () => {
   if (categoryWallpapers.length === 0) {
     return (
       <>
-        <Navbar />
-        <main className="flex min-h-[80vh] items-center justify-center px-6">
+        <main className="flex min-h-[71vh] items-center justify-center px-6">
           <div className="text-center">
             <span className="text-sm text-accent-white/50">
               CATEGORY NOT FOUND
@@ -115,7 +112,6 @@ const Category = () => {
 
   return (
     <>
-      <Navbar />
       <main className="mx-auto max-w-auto px-16 py-10">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
