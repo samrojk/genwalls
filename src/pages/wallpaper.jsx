@@ -39,10 +39,18 @@ const wallpaper = () => {
   }
 
   const relatedWallpapers = wallpapers
-    .filter(
-      (item) =>
-        item.category === wallpaper.category && item.id !== wallpaper.id,
-    )
+    .filter((w) => w.id !== wallpaper.id)
+    .map((w) => {
+      const matchingTags = w.tags.filter((tag) =>
+        wallpaper.tags.includes(tag),
+      ).length;
+
+      const score =
+        matchingTags * 5 + (w.category === wallpaper.category ? 3 : 0);
+
+      return { ...w, score };
+    })
+    .sort((a, b) => b.score - a.score)
     .slice(0, 3);
 
   return (
