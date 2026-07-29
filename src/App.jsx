@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollBehaviour from "./components/scrollbehaviour";
 import Layout from "./components/layout";
 import Home from "./pages/home";
 import Search from "./pages/search";
@@ -9,6 +10,7 @@ import Listings from "./pages/listings";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollBehaviour />
       <Routes>
         <Route element={<Layout />}>
           {/* Home */}
