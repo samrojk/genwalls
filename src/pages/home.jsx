@@ -102,7 +102,7 @@ const home = () => {
             </section>
 
             {/* Latest Section */}
-            <section id="latest" className="pb-20">
+            <section id="latest" className="pb-10">
               <div className="mb-6 flex items-center justify-between">
                 <h2 className="text-2xl font-medium">Latest</h2>
 
