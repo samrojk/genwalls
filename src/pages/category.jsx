@@ -13,11 +13,11 @@ const Category = () => {
 
     return (
       <>
-        <main className="mx-auto max-w-auto px-16 py-10">
+        <main className="mx-auto max-w-auto px-2 lg:px-16 py-6 lg:py-10">
           <div className="flex items-center justify-between">
             <span>
-              <h1 className="text-3xl font-semibold">Categories</h1>
-              <p className="mt-1 text-accent-white/64">
+              <h1 className="text-xl lg:text-3xl font-medium lg:font-semibold">Categories</h1>
+              <p className="hidden lg:block mt-1 text-accent-white/64">
                 Browse wallpapers by category
               </p>
             </span>
@@ -90,11 +90,11 @@ const Category = () => {
       <>
         <main className="flex min-h-[71vh] items-center justify-center px-6">
           <div className="text-center">
-            <span className="text-sm text-accent-white/50">
+            <span className="text-xs lg:text-sm text-accent-white/50">
               CATEGORY NOT FOUND
             </span>
-            <h1 className="mt-2 text-4xl font-semibold">Nothing here yet.</h1>
-            <p className="mt-2 text-accent-white/50">
+            <h1 className="mt-1 lg:mt-2 text-3xl lg:text-4xl font-semibold">Nothing here yet.</h1>
+            <p className="mt-2 text-sm lg:text-base text-accent-white/50">
               This category doesn't exist or has no wallpapers...
             </p>
             <button
@@ -112,7 +112,7 @@ const Category = () => {
 
   return (
     <>
-      <main className="mx-auto max-w-auto px-16 py-10">
+      <main className="mx-auto max-w-auto px-2lg:px-16 py-10">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
@@ -122,10 +122,10 @@ const Category = () => {
               <FaArrowLeft size={14} />
               Back
             </button>
-            <h1 className="text-xl font-semibold">{categoryName} Wallpapers</h1>
+            <h1 className="text-lg lg:text-xl font-medium lg:font-semibold">{categoryName} Wallpapers</h1>
           </div>
 
-          <p className="mt-2 text-sm text-accent-white/50">
+          <p className="lg:mt-2 text-sm text-accent-white/50">
             {categoryWallpapers.length} wallpapers
           </p>
         </div>

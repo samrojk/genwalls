@@ -17,7 +17,7 @@ const Footer = () => {
             active:opacity-70 lg:active:opacity-100
             lg:hover:bg-white/5 lg:hover:text-accent-white"
           >
-            <FaGithub className="size-6 lg:size-4.5" />
+            <FaGithub className="size-5 lg:size-4.5" />
             <span className="hidden lg:block">GitHub</span>
           </a>
 
@@ -31,7 +31,7 @@ const Footer = () => {
             active:opacity-70 lg:active:opacity-100
             lg:hover:bg-white/5 lg:hover:text-accent-white"
           >
-            <FaCoffee className="size-6 lg:size-4.5 lg:hidden" />
+            <FaCoffee className="size-5 lg:size-4.5 lg:hidden" />
             <span className="hidden lg:block">Buy Me a Coffee ☕</span>
           </a>
         </div>

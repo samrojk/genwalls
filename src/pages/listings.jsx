@@ -38,11 +38,11 @@ const Listing = () => {
 
   return (
     <>
-      <main className="mx-auto max-w-auto px-16 py-10">
+      <main className="mx-auto max-w-auto px-2 lg:px-16 py-8 lg:py-10">
         <div className="mb-6 flex items-center justify-between">
           <span>
-            <h1 className="text-3xl font-semibold">{title}</h1>
-            <p className="mt-1 text-accent-white/64">{description}</p>
+            <h1 className="text-xl lg:text-3xl font-medium lg:font-semibold">{title}</h1>
+            <p className="hidden lg:block mt-1 text-accent-white/64">{description}</p>
           </span>
 
           <div className="flex items-center gap-4">

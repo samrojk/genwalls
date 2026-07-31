@@ -20,9 +20,9 @@ const wallpaper = () => {
       <>
         <main className="flex min-h-[71vh] items-center justify-center px-6">
           <div className="text-center">
-            <span className="text-sm text-accent-white/50">404 ERROR</span>
-            <h1 className="mt-2 text-4xl font-semibold">Lost in the walls!</h1>
-            <p className="mt-2 text-accent-white/50">
+            <span className="text-xs lg:text-sm text-accent-white/50">404 ERROR</span>
+            <h1 className="mt-1 lg:mt-2 text-3xl lg:text-4xl font-semibold">Lost in the walls!</h1>
+            <p className="mt-2 text-sm lg:text-base text-accent-white/50">
               We couldn't find the wallpaper you're looking for...
             </p>
             <button
@@ -55,7 +55,7 @@ const wallpaper = () => {
 
   return (
     <>
-      <main className="mx-auto px-16 pb-10 py-8">
+      <main className="mx-auto px-2 lg:px-16 pb-6 lg:pb-10 py-4 lg:py-8">
         {/* Back btn */}
         <button
           onClick={() => navigate(-1)}
@@ -67,7 +67,7 @@ const wallpaper = () => {
 
         <section className="grid overflow-hidden rounded-2xl border border-accent-white/6 bg-accent-white/2 lg:grid-cols-[minmax(0,1fr)_340px]">
           {/* image */}
-          <div className="flex min-h-125 items-center justify-center bg-accent-dark lg:min-h-132 p-4">
+          <div className="flex min-h-auto items-center justify-center bg-accent-dark lg:min-h-132 p-4">
             <img
               src={wallpaper.image}
               alt={wallpaper.title}
@@ -150,7 +150,7 @@ const wallpaper = () => {
         {/* Related */}
         {relatedWallpapers.length > 0 && (
           <section>
-            <div className="mt-16 mb-6 flex items-center justify-between">
+            <div className="mt-12 lg:mt-16 mb-6 flex items-center justify-between">
               <h2 className="text-xl font-medium">More like this</h2>
 
               <Link
