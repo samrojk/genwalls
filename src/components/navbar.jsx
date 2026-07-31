@@ -22,7 +22,7 @@ const Navbar = () => {
       <nav className="px-2 lg:px-16 gap-4 sticky top-0 z-50 flex w-full items-center justify-between bg-accent-dark/80 py-3 backdrop-blur-lg">
         <Link
           to="/"
-          className="flex items-center gap-2 text-accent-white font-medium text-lg shrink-0"
+          className="flex items-center gap-2 text-accent-white font-medium text-lg shrink-0 -mr-1.5 lg:mr-0"
         >
           <img src={Logo} alt="Logo" className="w-10 h-10 lg:w-12 lg:h-12" />
           <span className="hidden sm:block">GenWalls</span>
@@ -59,7 +59,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(true)}
-          className="lg:hidden text-accent-white"
+          className="lg:hidden text-accent-white mr-2"
         >
           <CgMenu size={24} />
         </button>
