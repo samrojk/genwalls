@@ -19,7 +19,7 @@ const Searchbar = () => {
   return (
     <form
       onSubmit={handleSearch}
-      className="flex items-center gap-3 border border-accent-white/4 bg-accent-white/6 px-4 py-2 rounded-xl w-full max-w-100"
+      className="flex items-center gap-3 border border-accent-white/4 bg-accent-white/6 px-4 py-2 rounded-xl w-full min-w-60 max-w-100"
     >
       <button type="submit">
         <RiSearchAiLine size={22} className="text-accent-white" />
