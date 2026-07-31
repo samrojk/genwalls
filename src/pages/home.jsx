@@ -42,13 +42,13 @@ const home = () => {
 
   return (
     <>
-      <div className="px-16">
+      <div className="px-2 lg:px-16">
         <main className="mx-auto max-w-auto">
-          <section className="py-16 text-center">
-            <h1 className="text-accent-white font-semibold text-5xl tracking-tight">
+          <section className="mb-4 lg:mb-0 py-8 lg:py-16 text-center justify-items-center">
+            <h1 className="text-accent-white font-semibold text-3xl lg:text-5xl tracking-tight">
               Find your next wallpaper.
             </h1>
-            <p className="text-accent-white/50 text-base mt-4">
+            <p className="text-accent-white/50 w-80 lg:w-auto text-sm lg:text-base mt-2 lg:mt-4">
               Explore high-quality AI-generated wallpapers made for every
               screen.
             </p>
@@ -58,9 +58,9 @@ const home = () => {
           {/* Wallpapers Section */}
           <section>
             {/* Trending Section */}
-            <section id="trending" className="pb-20">
+            <section id="trending" className="pb-14 lg:pb-20">
               <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-2xl font-medium">Trending 🔥</h2>
+                <h2 className="text-xl lg:text-2xl font-medium">Trending 🔥</h2>
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
@@ -80,9 +80,9 @@ const home = () => {
             </section>
 
             {/* Featured Section */}
-            <section id="featured" className="pb-20">
+            <section id="featured" className="pb-14 lg:pb-20">
               <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-2xl font-medium">Featured</h2>
+                <h2 className="text-xl lg:text-2xl font-medium">Featured</h2>
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">
@@ -102,9 +102,9 @@ const home = () => {
             </section>
 
             {/* Latest Section */}
-            <section id="latest" className="pb-10">
+            <section id="latest" className="pb-6 lg:pb-20">
               <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-2xl font-medium">Latest</h2>
+                <h2 className="text-xl lg:text-2xl font-medium">Latest</h2>
 
                 <div className="flex items-center gap-4">
                   <span className="text-sm text-accent-white/60">

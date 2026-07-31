@@ -27,7 +27,7 @@ const search = () => {
 
   return (
     <>
-      <main className="mx-auto max-w-auto px-16 py-10">
+      <main className="mx-auto max-w-auto px-2 lg:px-16 py-8 lg:py-10">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
@@ -37,13 +37,15 @@ const search = () => {
               <FaArrowLeft size={14} />
               Back
             </button>
-            <h1 className="text-xl font-semibold">
+            <h1 className="text-sm lg:text-xl font-normal lg:font-semibold">
               Search results for "{query}"
             </h1>
           </div>
 
-          <p className="mt-2 text-sm text-accent-white/50">
-            {results.length} wallpapers found
+          <p className="flex gap-2 lg:mt-2 text-sm text-accent-white/50">
+            {results.length}{" "}
+            <span className="hidden lg:block">wallpapers found</span>
+            <span className="lg:hidden block">results</span>
           </p>
         </div>
 
