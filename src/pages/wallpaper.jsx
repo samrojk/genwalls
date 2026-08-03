@@ -27,7 +27,7 @@ const wallpaper = () => {
             </p>
             <button
               onClick={() => navigate(-1)}
-              className="mt-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100"
             >
               <FaArrowLeft size={14} />
               Go Back
@@ -55,11 +55,11 @@ const wallpaper = () => {
 
   return (
     <>
-      <main className="mx-auto px-2 lg:px-16 pb-6 lg:pb-10 py-4 lg:py-8">
+      <main className="mx-auto px-4 lg:px-16 pb-6 lg:pb-10 py-4 lg:py-8">
         {/* Back btn */}
         <button
           onClick={() => navigate(-1)}
-          className="mb-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+          className="mb-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100"
         >
           <FaArrowLeft size={14} />
           Back
@@ -150,12 +150,12 @@ const wallpaper = () => {
         {/* Related */}
         {relatedWallpapers.length > 0 && (
           <section>
-            <div className="mt-12 lg:mt-16 mb-6 flex items-center justify-between">
-              <h2 className="text-xl font-medium">More like this</h2>
+            <div className="mt-12 lg:mt-16 mb-4 lg:mb-6 flex items-center justify-between">
+              <h2 className="text-lg lg:text-xl font-medium">More like this</h2>
 
               <Link
                 to={`/category/${wallpaper.category.toLowerCase()}`}
-                className="flex items-center gap-1 rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-sm text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+                className="flex items-center gap-1 rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-sm text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100"
               >
                 View all
                 <FaAngleRight />

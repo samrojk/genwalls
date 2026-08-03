@@ -5,19 +5,20 @@ const categories = [
   "Cars",
   "Aesthetic",
   "Gaming",
-  "Nature",
-  "Space & Sci-Fi",
   "Abstract",
+  "Fictional",
+  "Nature",
+  "Space",
 ];
 
 const categorychips = () => {
   return (
-    <div className="mt-6 flex flex-wrap gap-2 justify-center">
+    <div className="mt-6 flex flex-wrap gap-3 lg:gap-2 justify-center">
       {categories.map((category) => (
         <Link
           key={category}
           to={`/category/${category.toLowerCase()}`}
-          className="rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-sm text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+          className="rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-sm text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-98 lg:scale-100"
         >
           {category}
         </Link>

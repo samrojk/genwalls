@@ -82,7 +82,7 @@ const Navbar = () => {
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-5">
+        <div className="flex items-center justify-between pl-8 p-4">
           <span className="text-accent-white font-medium text-lg">Menu</span>
 
           <button
@@ -98,7 +98,7 @@ const Navbar = () => {
           <Link
             to="/category"
             onClick={() => setMenuOpen(false)}
-            className="rounded-xl px-4 py-3 text-accent-white active:text-accent-white/70 transition"
+            className="font-medium rounded-xl px-4 py-3 text-accent-white/90 active:text-accent-white/70 transition"
           >
             Category
           </Link>
@@ -106,7 +106,7 @@ const Navbar = () => {
           <Link
             to="/trending"
             onClick={() => setMenuOpen(false)}
-            className="rounded-xl px-4 py-3 text-accent-white active:text-accent-white/70 transition"
+            className="font-medium rounded-xl px-4 py-3 text-accent-white/90 active:text-accent-white/70 transition"
           >
             Trending
           </Link>

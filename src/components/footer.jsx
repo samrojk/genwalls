@@ -3,8 +3,8 @@ import { FaGithub, FaCoffee } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="mt-10 border-t border-accent-white/6 bg-accent-dark/80 backdrop-blur-lg">
-      <div className="mx-auto flex items-center justify-between px-4 lg:px-16 pt-4 pb-8">
-        <p className="text-sm text-accent-white/40">© 2026 GenWalls</p>
+      <div className="mx-auto flex items-center justify-between px-4 lg:px-16 pt-2 lg:pt-4 pb-8">
+        <p className="text-xs lg:text-sm text-accent-white/40">© 2026 GenWalls</p>
 
         <div className="flex items-center gap-1 lg:gap-3">
           <a

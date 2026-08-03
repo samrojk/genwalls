@@ -13,22 +13,22 @@ const Category = () => {
 
     return (
       <>
-        <main className="mx-auto max-w-auto px-2 lg:px-16 py-6 lg:py-10">
+        <main className="mx-auto max-w-auto px-4 lg:px-16 py-4 lg:py-10">
           <div className="flex items-center justify-between">
             <span>
-              <h1 className="text-xl lg:text-3xl font-medium lg:font-semibold">Categories</h1>
+              <h1 className="text-lg lg:text-3xl font-medium lg:font-semibold">Categories</h1>
               <p className="hidden lg:block mt-1 text-accent-white/64">
                 Browse wallpapers by category
               </p>
             </span>
 
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-accent-white/60">
+            <div className="flex items-center gap-2 lg:gap-4">
+              <span className="text-xs lg:text-sm text-accent-white/60">
                 {totalCategories} categories
               </span>
               <Link
                 to="/"
-                className="flex items-center gap-1 rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-sm text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+                className="flex items-center gap-1 rounded-full border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-sm text-accent-white/64 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100"
               >
                 Back to Home
                 <FaAngleRight />
@@ -36,7 +36,7 @@ const Category = () => {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 lg:mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => {
               const preview = wallpapers.find((w) => w.category === category);
 
@@ -99,7 +99,7 @@ const Category = () => {
             </p>
             <button
               onClick={() => navigate(-1)}
-              className="mt-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100"
             >
               <FaArrowLeft size={14} />
               Go Back
@@ -112,12 +112,12 @@ const Category = () => {
 
   return (
     <>
-      <main className="mx-auto max-w-auto px-2lg:px-16 py-10">
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+      <main className="mx-auto max-w-auto px-4 lg:px-16 py-4 lg:py-10">
+        <div className="mb-4 lg:mb-6 flex items-center justify-between">
+          <div className="flex lg:items-center gap-4 flex-col lg:flex-row w-full">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+              className="-ml-1 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100 w-fit"
             >
               <FaArrowLeft size={14} />
               Back
@@ -125,7 +125,7 @@ const Category = () => {
             <h1 className="text-lg lg:text-xl font-medium lg:font-semibold">{categoryName} Wallpapers</h1>
           </div>
 
-          <p className="lg:mt-2 text-sm text-accent-white/50">
+          <p className="mt-14 lg:mt-2 text-xs lg:text-sm text-accent-white/50 w-24">
             {categoryWallpapers.length} wallpapers
           </p>
         </div>
