@@ -27,22 +27,22 @@ const search = () => {
 
   return (
     <>
-      <main className="mx-auto max-w-auto px-2 lg:px-16 py-8 lg:py-10">
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+      <main className="mx-auto max-w-auto px-4 lg:px-16 py-4 lg:py-10">
+        <div className="mb-4 lg:mb-6 flex items-center justify-between">
+          <div className="flex lg:items-center gap-4 flex-col-reverse lg:flex-row w-full">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5"
+              className="-ml-1 inline-flex items-center gap-2 rounded-xl border bg-accent-white/2 border-accent-white/4 px-4 py-2 text-accent-white/80 transition-all duration-200 hover:border-accent-white/8 hover:text-accent-white hover:bg-accent-white/5 scale-95 lg:scale-100 w-fit"
             >
               <FaArrowLeft size={14} />
               Back
             </button>
-            <h1 className="text-sm lg:text-xl font-normal lg:font-semibold">
+            <h1 className="text-sm lg:text-xl font-normal lg:font-medium text-accent-white/95">
               Search results for "{query}"
             </h1>
           </div>
 
-          <p className="flex gap-2 lg:mt-2 text-sm text-accent-white/50">
+          <p className="flex gap-1.5 mt-8 lg:mt-2 text-sm text-accent-white/50 lg:w-37">
             {results.length}{" "}
             <span className="hidden lg:block">wallpapers found</span>
             <span className="lg:hidden block">results</span>
