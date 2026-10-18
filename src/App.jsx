@@ -6,6 +6,8 @@ import Search from "./pages/search";
 import Category from "./pages/category";
 import Wallpaper from "./pages/wallpaper";
 import Listings from "./pages/listings";
+import Upload from "./pages/upload";
+import AdminRoute from "./components/AdminRoute";
 
 function App() {
   return (
@@ -30,6 +32,16 @@ function App() {
 
           {/* Wallpaper */}
           <Route path="/wallpaper/:slug" element={<Wallpaper />} />
+
+          {/* Upload */}
+          <Route
+            path="/admin/upload"
+            element={
+              <AdminRoute>
+                <Upload />
+              </AdminRoute>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
